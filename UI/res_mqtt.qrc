@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>../icon/mqtt.png</file>
+    <file>../icon/checkNo.jpg</file>
+    <file>../icon/checkYes.jpg</file>
+  </qresource>
+</RCC>
