@@ -70,6 +70,9 @@ QLabel{
           <property name="text">
            <string>...........................................................................................................................................</string>
           </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item row="1" column="0">
@@ -229,6 +232,9 @@ QLabel{
           <property name="text">
            <string>Відключено</string>
           </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item row="1" column="0">
@@ -243,6 +249,9 @@ QLabel{
           <property name="text">
            <string>Помилки</string>
           </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item row="2" column="0">
@@ -256,6 +265,9 @@ QLabel{
          <widget class="QLineEdit" name="lneTrace">
           <property name="text">
            <string>Інформація</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
