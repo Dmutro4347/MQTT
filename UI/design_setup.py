@@ -12,16 +12,60 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_DialogSetup(object):
     def setupUi(self, DialogSetup):
         DialogSetup.setObjectName("DialogSetup")
-        DialogSetup.resize(581, 366)
-        font = QtGui.QFont()
-        font.setFamily("Rutenia2008VasylChebanyk")
-        DialogSetup.setFont(font)
+        DialogSetup.resize(459, 293)
+        DialogSetup.setMinimumSize(QtCore.QSize(459, 293))
+        DialogSetup.setStyleSheet("QLabel{\n"
+"  font-size: 20px;\n"
+"  color : rgb(0, 100, 0);\n"
+"}\n"
+"\n"
+"QLineEdit{\n"
+"    font-size : 20px\n"
+"}")
         self.buttonBox = QtWidgets.QDialogButtonBox(DialogSetup)
-        self.buttonBox.setGeometry(QtCore.QRect(220, 290, 341, 32))
+        self.buttonBox.setGeometry(QtCore.QRect(60, 210, 341, 32))
+        self.buttonBox.setMinimumSize(QtCore.QSize(341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.StandardButton.Cancel|QtWidgets.QDialogButtonBox.StandardButton.Reset|QtWidgets.QDialogButtonBox.StandardButton.Save)
         self.buttonBox.setCenterButtons(False)
         self.buttonBox.setObjectName("buttonBox")
+        self.widget = QtWidgets.QWidget(DialogSetup)
+        self.widget.setGeometry(QtCore.QRect(60, 20, 341, 176))
+        self.widget.setObjectName("widget")
+        self.formLayout = QtWidgets.QFormLayout(self.widget)
+        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.formLayout.setObjectName("formLayout")
+        self.lblBroker = QtWidgets.QLabel(self.widget)
+        self.lblBroker.setObjectName("lblBroker")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.lblBroker)
+        self.lneBroker = QtWidgets.QLineEdit(self.widget)
+        self.lneBroker.setText("")
+        self.lneBroker.setObjectName("lneBroker")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lneBroker)
+        self.lblPort = QtWidgets.QLabel(self.widget)
+        self.lblPort.setObjectName("lblPort")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.lblPort)
+        self.lnePort = QtWidgets.QLineEdit(self.widget)
+        self.lnePort.setObjectName("lnePort")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lnePort)
+        self.lblClientId = QtWidgets.QLabel(self.widget)
+        self.lblClientId.setObjectName("lblClientId")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.lblClientId)
+        self.lneClientId = QtWidgets.QLineEdit(self.widget)
+        self.lneClientId.setObjectName("lneClientId")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lneClientId)
+        self.lblUsername = QtWidgets.QLabel(self.widget)
+        self.lblUsername.setObjectName("lblUsername")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.lblUsername)
+        self.lneUsername = QtWidgets.QLineEdit(self.widget)
+        self.lneUsername.setObjectName("lneUsername")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lneUsername)
+        self.lblPassword = QtWidgets.QLabel(self.widget)
+        self.lblPassword.setObjectName("lblPassword")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.lblPassword)
+        self.lnePassword = QtWidgets.QLineEdit(self.widget)
+        self.lnePassword.setObjectName("lnePassword")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lnePassword)
 
         self.retranslateUi(DialogSetup)
         self.buttonBox.accepted.connect(DialogSetup.accept) # type: ignore
@@ -31,6 +75,11 @@ class Ui_DialogSetup(object):
     def retranslateUi(self, DialogSetup):
         _translate = QtCore.QCoreApplication.translate
         DialogSetup.setWindowTitle(_translate("DialogSetup", "Dialog"))
+        self.lblBroker.setText(_translate("DialogSetup", "broker:"))
+        self.lblPort.setText(_translate("DialogSetup", "port:"))
+        self.lblClientId.setText(_translate("DialogSetup", "client ID:"))
+        self.lblUsername.setText(_translate("DialogSetup", "username:"))
+        self.lblPassword.setText(_translate("DialogSetup", "password:"))
 
 
 if __name__ == "__main__":

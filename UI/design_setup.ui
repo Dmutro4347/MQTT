@@ -6,26 +6,43 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>581</width>
-    <height>366</height>
+    <width>459</width>
+    <height>293</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Rutenia2008VasylChebanyk</family>
-   </font>
+  <property name="minimumSize">
+   <size>
+    <width>459</width>
+    <height>293</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+  font-size: 20px;
+  color : rgb(0, 100, 0);
+}
+
+QLineEdit{
+	font-size : 20px
+}</string>
+  </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>290</y>
+     <x>60</x>
+     <y>210</y>
      <width>341</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>341</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -36,6 +53,72 @@
    <property name="centerButtons">
     <bool>false</bool>
    </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>341</width>
+     <height>176</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblBroker">
+      <property name="text">
+       <string>broker:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lneBroker">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblPort">
+      <property name="text">
+       <string>port:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lnePort"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="lblClientId">
+      <property name="text">
+       <string>client ID:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lneClientId"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblUsername">
+      <property name="text">
+       <string>username:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lneUsername"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="lblPassword">
+      <property name="text">
+       <string>password:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="lnePassword"/>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
