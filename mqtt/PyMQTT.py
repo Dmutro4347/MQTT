@@ -8,7 +8,7 @@ mqtt_connect = {
     'port': 1883,
     'client_id': 'PC_terminal',
     'username': 'operator_pc',
-    'password': 'Fhajhc0509',
+    'password': '',
 }
 client = ''
 
